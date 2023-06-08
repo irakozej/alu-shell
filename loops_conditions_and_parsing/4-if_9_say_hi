@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script displays "Best School" 10 times using the until loop.
 count=1
-while [[ $count -lt 10 ]]; do
+while [[ $count -le 10 ]]; do
 
 	if [[ $count -eq 9 ]]; then
 echo "Best School"
