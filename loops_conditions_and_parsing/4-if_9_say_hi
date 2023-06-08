@@ -2,9 +2,10 @@
 # This script displays "Best School" 10 times using the until loop.
 count=1
 while [[ $count -lt 10 ]]; do
-	echo "Best School"
+
 	if [[ $count -eq 9 ]]; then
-echo "Hi"
+echo "Best School"
+		echo "Hi"
 else
 echo "Best School"
 	fi
