@@ -4,7 +4,8 @@
 
 for file in *; do
   if [[ -f "$file" && ! "$file" =~ ^\.[^.]+$ ]]; then
-    echo "${file#*-}"
+    filename=$(echo "$file" | cut -d '-' -f 2-)
+    echo "$filename"
   fi
 done
 
