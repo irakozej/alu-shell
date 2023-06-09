@@ -6,6 +6,18 @@ for file in *; do
   if [[ -f "$file" && ! "$file" =~ ^\.[^.]+$ ]]; then
     filename=$(echo "$file" | sed 's/^[^-]*-//')
     echo "$filename"
+  elif [[ -d "$file" ]]; then
+    if [[ $(ls -A "$file") ]]; then
+      echo "$file:"
+      for subfile in "$file"/*; do
+        if [[ -f "$subfile" && ! "$subfile" =~ ^\.[^.]+$ ]]; then
+          subfilename=$(echo "$subfile" | sed 's/^[^-]*-//')
+          echo "$subfilename"
+        fi
+      done
+    else
+      echo "$file"
+    fi
   fi
 done
 
