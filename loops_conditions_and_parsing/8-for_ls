@@ -4,7 +4,7 @@
 
 for file in *; do
   if [[ -f "$file" && ! "$file" =~ ^\.[^.]+$ ]]; then
-    filename=$(echo "$file" | cut -d '-' -f 2-)
+    filename=$(echo "$file" | sed 's/^[^-]*-//')
     echo "$filename"
   fi
 done
