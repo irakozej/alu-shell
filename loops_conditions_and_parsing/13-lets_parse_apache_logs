@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script: apache_logs_parser.sh
 # Description: Parses Apache log files and displays visitor IP along with HTTP status code
 
