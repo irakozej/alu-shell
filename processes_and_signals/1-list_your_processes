@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Get the list of all processes
 processes=$(ps -eo pid,ppid,user,cmd --forest)
 
