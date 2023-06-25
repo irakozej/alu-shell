@@ -1,3 +1,2 @@
 #!/bin/bash
 mapfile -t lines < "iacta"; echo "${lines[2]}"
-
