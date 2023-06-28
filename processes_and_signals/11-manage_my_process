@@ -25,7 +25,7 @@ stop_process() {
 restart_process() {
     stop_process
     start_process
-    echo "manage_my_process restarted"
+    echo "manage_my_process restarted" >/dev/null
     exit 0
 }
 
