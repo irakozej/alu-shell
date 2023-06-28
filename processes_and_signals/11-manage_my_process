@@ -6,6 +6,7 @@ start_process() {
     ./manage_my_process &
     echo $! > /var/run/my_process.pid
     echo "manage_my_process started"
+    exit 0
 }
 
 # Function to stop the manage_my_process script
