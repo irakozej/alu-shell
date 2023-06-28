@@ -8,8 +8,12 @@ pid=$(pgrep -f "7-highlander")
 if [[ -n $pid ]]; then
   # Kill the process
   kill "$pid"
-  echo "Process '7-highlander' (PID: $pid) has been terminated."
+  sleep 1 # Wait for the process to terminate
+  if ! pgrep -f "7-highlander" >/dev/null; then
+    echo "OK"
+  else
+    echo "Failed to terminate the process '7-highlander'"
+  fi
 else
   echo "Process '7-highlander' is not currently running."
 fi
-
