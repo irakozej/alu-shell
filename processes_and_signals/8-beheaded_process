@@ -11,9 +11,10 @@ if [[ -n $pid ]]; then
   sleep 1 # Wait for the process to terminate
   if ! pgrep -f "7-highlander" >/dev/null; then
     echo "OK"
-  else
-    echo "Failed to terminate the process '7-highlander'"
+    exit 0
   fi
-else
-  echo "Process '7-highlander' is not currently running."
 fi
+
+echo "Failed to terminate the process '7-highlander'"
+exit 1
+
