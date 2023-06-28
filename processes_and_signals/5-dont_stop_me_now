@@ -12,6 +12,3 @@ else
   kill "$pid"
 fi
 
-# Print an empty line
-echo
-
