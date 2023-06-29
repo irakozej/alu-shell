@@ -1,2 +1,2 @@
 #!/bin/bash
-sort | uniq -u
+ls -lt | grep '^-' | head -n 10
