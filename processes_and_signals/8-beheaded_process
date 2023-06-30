@@ -1,20 +1,5 @@
 #!/usr/bin/env bash
 # This script kills the process named "7-highlander"
 
-# Find the process ID (PID) of the process named "7-highlander"
-pid=$(pgrep -f "7-highlander")
-
-# Check if the process is running
-if [[ -n $pid ]]; then
-  # Kill the process
-  kill "$pid"
-  sleep 1 # Wait for the process to terminate
-  if ! pgrep -f "7-highlander" >/dev/null; then
-    echo "OK"
-    exit 0
-  fi
-fi
-
-echo "Failed to terminate the process '7-highlander'"
-exit 1
-
+# Find the process ID (PID) of the process named "7-head"
+kill -9 "$(pgrep -f 7-highlander)"
